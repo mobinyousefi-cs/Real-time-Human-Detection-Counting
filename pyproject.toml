@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "human-detection-counter"
+version = "0.1.0"
+description = "Real-time human detection and counting using HOG + SVM and OpenCV."
+authors = [
+  { name = "Mobin Yousefi", email = "example@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+  "opencv-python>=4.8.0",
+  "imutils>=0.5.4",
+  "numpy>=1.24.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/mobinyousefi-cs"
+Source = "https://github.com/mobinyousefi-cs/real-time-human-detection-counting"
+
+[project.scripts]
+human-detection-counter = "human_detection_counter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
